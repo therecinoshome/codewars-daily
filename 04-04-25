@@ -1,0 +1,10 @@
+function betterThanAverage(classPoints, yourPoints) {
+  let totalPoints = 0;
+  classPoints.push(yourPoints);
+  let totalStudents = classPoints.length;
+  classPoints.forEach(p => {
+    totalPoints = totalPoints + p;
+  });
+  let averagePoints = totalPoints / totalStudents;
+  return yourPoints > averagePoints
+}
