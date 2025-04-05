@@ -1,0 +1,7 @@
+function check(a, x) {
+  let value = false;
+  a.forEach(i => {
+    if (i === x) value = true
+  })
+  return value
+}
