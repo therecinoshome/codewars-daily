@@ -1,0 +1,11 @@
+function checkExam(array1, array2) {
+  const numOfAnswers =  array1.length;
+  const blankAnswers = [];
+  const correctAnswers = [];
+  array2.forEach((a, i) => {
+    if (a === '') blankAnswers.push(a)
+    if (a === array1[i]) correctAnswers.push(a)
+  })
+  const score = (correctAnswers.length * 4) - (numOfAnswers - correctAnswers.length - blankAnswers.length)
+  return score > 0 ? score : 0
+}
