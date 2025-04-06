@@ -3,13 +3,13 @@ function computeDepth (x){
   let depth = 1;
   let digits = [];
   while (digits.length <= 9) {
+    depth++
     let result = x * depth;
     let split = result.toString().split('');
     let splitDigits = split.map(Number);
     splitDigits.forEach(d => {
       if (!digits.includes(d)) digits.push(d)
     })
-    depth++
   }
-  return depth - 1
+  return depth
 }
