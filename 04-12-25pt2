@@ -1,0 +1,3 @@
+function findAverage(array) {
+  return array.reduce((ac, e) => ac + e, 0) / array.length || 0
+}
