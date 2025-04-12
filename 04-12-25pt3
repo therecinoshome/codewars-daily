@@ -1,0 +1,14 @@
+function getScore(arr) {
+  let points = 0;
+  let level = 0;
+  arr.reduce((ac, a) => {
+    level = Math.floor(ac/10);
+    if (a === 0) points = points + 0;
+    if (a === 1) points = points + 40 * (level + 1);
+    if (a === 2) points = points + 100 * (level + 1);
+    if (a === 3) points = points + 300 * (level + 1);
+    if (a === 4) points = points + 1200 * (level + 1);
+    return ac + a;
+  } ,0)
+  return points;
+}
