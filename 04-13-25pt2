@@ -1,0 +1,5 @@
+function arrayMadness(a, b) {
+  const sumOfSquaresA = a.reduce((ac, e) => ac + Math.pow(e, 2), 0);
+  const sumOfCubesB = b.reduce((ac, e) => ac + Math.pow(e, 3), 0);
+  return sumOfSquaresA > sumOfCubesB;
+}
