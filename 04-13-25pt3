@@ -1,0 +1,9 @@
+// A Nice array is defined to be an array where for every value n in the array, there is also an element n - 1 or n + 1 in the array.
+function isNice(arr){
+  if (arr.length === 0) return false;
+  let bool = [];
+  arr.forEach(ar => {
+    bool.push(arr.some(a => ar + 1 === a || ar - 1 === a));
+  })
+  return bool.includes(false) ? false : true;
+}
