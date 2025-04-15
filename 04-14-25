@@ -1,0 +1,3 @@
+function aliasGen(first, last){
+  return (first[0].match(/[A-Za-z]/) && last[0].match(/[A-Za-z]/)) ? `${firstName[first[0].toUpperCase()]} ${surname[last[0].toUpperCase()]}` : "Your name must start with a letter from A - Z.";
+}
