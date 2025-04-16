@@ -1,0 +1,13 @@
+function logicalCalc(array, op){
+  if (array.length === 1) return array[0];
+  if (op === 'AND' && array.includes(false)) {
+    return false;
+  } else if (op === 'OR' && !array.includes(true)) {
+    return false;
+  } else if (op === 'XOR') {
+    const result = array.reduce((ac, a, i) => ac + a,0);
+    return result % 2 !== 0;
+} else {
+  return true;
+}
+}
