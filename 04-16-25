@@ -1,0 +1,5 @@
+function stairsIn20(s){
+  return s.reduce((ac, a) => {
+    return ac + a.reduce((acc, e) => acc + e, 0)
+  }, 0) * 20;
+}
