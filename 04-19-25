@@ -1,0 +1,4 @@
+const head = array => array[0];
+const tail = (array) => array.filter((a, i) => i !== 0);
+const init = (array) => array.filter((a, i) => i !== array.length -1);
+const last = (array) => array[array.length - 1];
