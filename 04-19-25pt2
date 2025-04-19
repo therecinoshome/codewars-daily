@@ -1,0 +1,1 @@
+const binaryArrayToNumber = arr => arr.reduce((ac, a, i, ar) => ac + (a * (Math.pow(2, ar.length - (i + 1)))), 0);
