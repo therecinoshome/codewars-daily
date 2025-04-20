@@ -1,0 +1,10 @@
+function eachCons(array, n) {
+  if (array.length === 0) return [];
+  let result = [];
+	for (let i = 0; i < Math.ceil((array.length - n + 1)); i++) {
+    if (i === array.length) break;
+    let portion = array.slice(i, n + i);
+    result.push(portion);
+  }
+  return result
+}
