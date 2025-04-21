@@ -1,0 +1,9 @@
+function arrayLeaders(numbers){
+  const set = [];
+  for(let i = 0; i < numbers.length; i++) {
+    let rightNums = numbers.slice(i + 1, numbers.length);
+    let totalOfRightNums = rightNums.reduce((ac, a) => ac + a, 0);
+    if (numbers[i] > totalOfRightNums) set.push(numbers[i]);
+  }
+  return set
+}
