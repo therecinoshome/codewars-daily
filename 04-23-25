@@ -1,0 +1,19 @@
+function isVow(a){
+  const newA = [];
+  for(let i = 0; i < a.length; i++) {
+    if (a[i] === 97) {
+      newA.push('a');
+    } else if (a[i] === 101) {
+      newA.push('e');
+    } else if (a[i] === 105) {
+      newA.push('i');
+    } else if (a[i] === 111) {
+      newA.push('o');
+    } else if (a[i] === 117) {
+      newA.push('u');
+    } else {
+      newA.push(a[i]);
+    }
+  }
+  return newA;
+}
