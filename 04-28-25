@@ -1,0 +1,25 @@
+function unusedDigits(...arr) {
+  const integers = {
+    '1': false,
+    '2': false,
+    '3': false,
+    '4': false,
+    '5': false,
+    '6': false,
+    '7': false,
+    '8': false,
+    '9': false,
+    '0': false,
+  }
+  let unusedIntegers = '';
+  const join = arr.join()
+  for (let key in integers) {
+    if (join.includes(key)) {
+      integers[key] = true;
+    }
+  }
+  for (let key in integers) {
+    if (integers[key] === false) unusedIntegers += key;
+  }
+  return unusedIntegers;
+}
