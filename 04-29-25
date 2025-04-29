@@ -1,0 +1,7 @@
+function capMe(names) {
+  return names.map(n => {
+    const lowerCase = n.toLowerCase();
+    const removeFirstLetter = lowerCase.slice(1);
+    return lowerCase[0].toUpperCase() + removeFirstLetter
+  })
+}
