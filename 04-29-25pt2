@@ -1,0 +1,5 @@
+function chineseZodiac(year){
+  const animalIndex = (year - 1924) % 12;
+  const elementsIndex = Math.floor((year - 1924) / 2) % 5;
+  return `${elements[elementsIndex]} ${animals[animalIndex]}`
+}
