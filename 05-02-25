@@ -1,0 +1,9 @@
+function differenceInAges(ages){
+  let oldest = ages[0];
+  let youngest = ages [0];
+  for (let i = 1; i < ages.length; i++) {
+    if (ages[i] > oldest) oldest = ages[i];
+    if (ages[i] < youngest) youngest = ages[i];
+  }
+  return [youngest, oldest, oldest - youngest];
+}
