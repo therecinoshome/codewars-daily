@@ -1,0 +1,7 @@
+function array(string) {
+  const stringToArray = string.split(',');
+  if (stringToArray.length < 3) return null;
+  stringToArray.pop();
+  stringToArray.shift();
+  return stringToArray.join(' ');
+}
