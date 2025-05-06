@@ -1,0 +1,4 @@
+function findAllDuplicates(arr) {
+  const set = new Set(arr.filter((a, i, ar) => ar.includes(a, i + 1)))
+  return Array.from(set);
+}
