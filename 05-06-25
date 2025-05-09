@@ -1,0 +1,7 @@
+function chain(input, fs) {
+  let arg = input;
+  for (let i = 0; i < fs.length; i++) {
+    arg = fs[i](arg);
+  }
+  return arg;
+}
