@@ -1,0 +1,4 @@
+function sum (numbers) {
+  if (numbers.length <= 1) return numbers[0] || 0;
+  return numbers.reduce((ac, a) => ac + (a), 0)
+}
