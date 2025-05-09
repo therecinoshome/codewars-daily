@@ -1,0 +1,10 @@
+function comes_after(str, l) {
+  const stringToArray = Array.from(str);
+  const newArray = [];
+  for (let i = 0; i < stringToArray.length; i++) {
+    if (stringToArray[i].toLowerCase() === l && /[a-zA-Z]/.test(stringToArray[i + 1])) {
+      newArray.push(stringToArray[i + 1]);
+    }
+  }
+  return newArray.join('')
+}
