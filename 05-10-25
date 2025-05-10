@@ -1,0 +1,1 @@
+const squareDigits = num => Number(Array.from(String(num)).reduce((ac, d) => ac + String(Math.pow(Number(d), 2)) ,''));
