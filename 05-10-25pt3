@@ -1,0 +1,11 @@
+function highAndLow(numbers){
+  const a = numbers.split(' ');
+  let highest = Number(a[0]);
+  let lowest = Number(a[0]);
+  for(let i = 1; i < a.length; i++) {
+    const n = Number(a[i]);
+    if (n > highest) highest = n;
+    else if (n < lowest) lowest = n;
+  }
+  return `${String(highest)} ${String(lowest)}`
+}
