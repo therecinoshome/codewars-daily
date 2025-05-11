@@ -1,0 +1,10 @@
+function accum(s) {
+	let result = '';
+  Array.from(s).forEach((x, i) => {
+    for(let j = 0; j <= i; j++) {
+      j !== 0 ? result = result + x.toLowerCase() : result = result + x.toUpperCase();
+    }
+    if (i !== s.length -1) result = result + "-"
+  })
+  return result;
+}
