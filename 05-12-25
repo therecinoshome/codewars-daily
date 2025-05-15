@@ -1,0 +1,5 @@
+function XO(str) {
+  const xMatch = str.match(/x/gi) || 0;
+  const oMatch = str.match(/o/gi) || 0;
+  return oMatch.length === xMatch.length;
+}
