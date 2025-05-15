@@ -1,0 +1,4 @@
+function isIsogram(str){
+  const lowerCase = str.toLowerCase();
+  return lowerCase.length === new Set(lowerCase).size
+}
