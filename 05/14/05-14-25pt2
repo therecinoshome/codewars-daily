@@ -1,0 +1,8 @@
+function findShort(s){
+  const array = s.split(' ');
+  let smallest = array[0].length;
+  for(let i = 1; i < array.length; i++) {
+    if (array[i].length < smallest) smallest = array[i].length;
+  }
+  return smallest;
+}
