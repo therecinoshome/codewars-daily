@@ -1,0 +1,11 @@
+function openOrSenior(data){
+  const o = [];
+  data.forEach((d, i) => {
+    if (d[0] >= 55 && d[1] > 7) {
+      o.push('Senior');
+    } else {
+      o.push('Open');
+    }
+  });
+  return o;
+}
