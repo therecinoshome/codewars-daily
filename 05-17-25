@@ -1,0 +1,3 @@
+function number(busStops){
+  return busStops.reduce((ac, a) => ac + a[0] - a[1], 0);
+}
