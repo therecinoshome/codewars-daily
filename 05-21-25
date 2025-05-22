@@ -1,0 +1,15 @@
+function getSum(a, b)
+{
+   const digits = new Set(arguments)
+   const array = Array.from(digits).sort((a, b) => a - b);
+   if (array.length === 1) return array[0];
+  const itemsNeeded = array[array.length -1] - array[0] - 2;
+  let newArray = [array[0]];
+  let count = array[0];
+  for(let i = 0; i <= itemsNeeded; i++) {
+    count++
+    newArray.push(count);
+  }
+  newArray.push(array[array.length -1]);
+  return newArray.reduce((ac, a) => ac + a, 0);
+}
