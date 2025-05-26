@@ -1,0 +1,4 @@
+function findNextSquare(sq) {
+  const squareRoot = Math.sqrt(sq);
+  return squareRoot % 1 === 0 ? Math.pow(squareRoot + 1, 2) : -1
+}
