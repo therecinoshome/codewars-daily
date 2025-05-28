@@ -1,0 +1,6 @@
+function sumOfMinimums(arr) {
+  return arr.reduce((ac, a) => {
+    const ordered = a.sort((x, y) => x - y);
+    return ac + ordered[0];
+  }, 0)
+}
