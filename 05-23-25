@@ -1,0 +1,12 @@
+function solution(str, ending){
+  let strLength = str.length;
+  let endLength = ending.length;
+  for(let i = endLength -1; i >= 0; i--) {
+    if (str[strLength - 1] === ending[i]) {
+      strLength--
+    } else {
+      return false
+    }
+  }
+  return true
+}
