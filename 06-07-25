@@ -1,0 +1,11 @@
+"use strict";
+
+function flattenAndSort(array) {
+  const separated = [];
+  array.forEach(m => {
+    m.forEach(n => {
+      separated.push(n)
+    })
+  })
+  return separated.sort((a, b) => a - b);
+}
