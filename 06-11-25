@@ -1,0 +1,4 @@
+function stray(numbers) {
+  if(numbers[0] !== numbers[1] && numbers[0] !== numbers[2]) return numbers[0];
+  return numbers.find(f => f !== numbers[0]);
+}
