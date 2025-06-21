@@ -1,0 +1,6 @@
+function roundToNext5(n){
+  const r = n % 5; 
+  if(r === 0) return n;
+  else if (r>0) return n + (5 - r);
+  else return n - r 
+}
