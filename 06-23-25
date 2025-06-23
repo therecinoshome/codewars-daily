@@ -1,0 +1,10 @@
+const capitals = function (word) {
+	const ar = word.split("");
+  let result = [];
+  for(let i = 0; i < ar.length; i++) {
+    if(/[A-Z]/g.test(ar[i])) {
+      result.push(i)
+    }
+  }
+  return result
+};
