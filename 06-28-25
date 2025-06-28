@@ -1,0 +1,9 @@
+function compoundArray(a, b) {
+  const longest = a.length > b.length ? a.length : b.length;
+  const newAr = [];
+  for(let i = 0; i<longest; i++) {
+    if(a[i] !== undefined) newAr.push(a[i])
+    if(b[i] !== undefined) newAr.push(b[i])
+  }
+  return newAr;
+}
