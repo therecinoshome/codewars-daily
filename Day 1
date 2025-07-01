@@ -1,0 +1,35 @@
+// <h1 id="h1">The Count is: 0</h1>
+// <button id="resetBtn">Reset Count</button>
+// <button id="decreaseCountBtn">Decrease Count</button>
+// <button id="increaseCountBtn">Increase Count</button>
+
+
+document.addEventListener('DOMContentLoaded', e => {
+  
+  const $ = selector => document.getElementById(selector);
+
+  const counterUI = {
+    resetBtn: $('resetBtn'),
+    decreaseCountBtn: $('decreaseCountBtn'),
+    increaseCountBtn: $('increaseCountBtn'),
+    h1: $('h1'),
+  }
+
+  const {resetBtn, decreaseCountBtn, increaseCountBtn, h1 } = counterUI;
+  
+  let count = JSON.parse(localStorage.getItem('count')) ?? 0;
+  
+  if(localStorage.getItem('count') !== null) {
+    h1.textContent = `The Count is: ${count}`
+  }
+  
+  function updateCount(c) {
+    count = c;
+    h1.textContent = `The Count is: ${count}`
+    localStorage.setItem('count', JSON.stringify(count));
+  }
+  
+  resetBtn.addEventListener('click', () => updateCount(0));
+  decreaseCountBtn.addEventListener('click', () => updateCount(count - 1));
+  increaseCountBtn.addEventListener('click', () => updateCount(count + 1));
+});
