@@ -1,0 +1,9 @@
+function findAll(array, n) {
+    const indexOfN = [];
+    for(let i = 0; i < array.length; i++){
+        if(array[i] === n){
+            indexOfN.push(i)
+        }
+    }
+    return indexOfN
+}
