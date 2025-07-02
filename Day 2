@@ -1,0 +1,26 @@
+// <h1></h1>
+// <img src="" alt="">
+// <button>Roll The Dice</button>
+
+const $ = selector => document.querySelector(selector);
+
+const diceUI = {
+  h1: $('h1'),
+  btn: $('button'),
+  img: $('img'),
+  '1': 'https://cdn.pixabay.com/photo/2014/04/03/10/24/one-310338_640.png',
+  '2': 'https://cdn.pixabay.com/photo/2014/04/03/10/24/two-310337_640.png',
+  '3': 'https://cdn.pixabay.com/photo/2014/04/03/11/56/dice-312624_640.png',
+  '4': 'https://cdn.pixabay.com/photo/2014/04/03/11/56/dice-312623_640.png',
+  '5': 'https://cdn.pixabay.com/photo/2014/04/03/11/56/dice-312622_640.png',
+  '6': 'https://cdn.pixabay.com/photo/2014/04/03/10/24/dice-310333_640.png',
+}
+
+const { h1, btn, img } = diceUI;
+
+btn.addEventListener('click', () => {
+  const randomNumber = String(Math.floor(Math.random() * 6 + 1));
+  h1.textContent = randomNumber;
+  img.src = diceUI[randomNumber];
+  img.alt = `A dice showing the number ${randomNumber}`
+})
