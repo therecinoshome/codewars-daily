@@ -1,0 +1,4 @@
+function cost (mins) { 
+  if (mins <= 65) return 30;
+  else return (Math.ceil((mins - 65) / 30) * 10) + 30;
+}
