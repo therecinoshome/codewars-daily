@@ -1,0 +1,14 @@
+const orderedCount = function (text) {
+  const array = text.split('')
+  const set = new Set();
+  let result = [];
+  for(let i = 0; i < array.length; i++) {
+    if(set.has(array[i])) continue;
+    else {
+      set.add(array[i]);
+      const repeated = array.filter(a => a === array[i]);
+      result.push([array[i], repeated.length]);
+    }
+  }
+  return result;
+}
