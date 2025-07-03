@@ -1,0 +1,75 @@
+<h1>Start typing the following sentence and press endter once done to find out your typing speed:</h1>
+<span style="color: blue;"></span><span id="h2"></span>
+<form action="submit">
+  <input type="text" id="meter">
+  <button type="reset">Reset</button>
+  <button type="submit">Submit</button>
+</form>
+
+<style>span {
+  font-size: 2rem;
+}
+
+input {
+  width: 50%;
+  padding: 1rem;
+  border: 1px solid lightgrey;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+</style>
+
+<script>
+  const input = document.getElementById('meter');
+const form = document.querySelector('form');
+const h2 = document.querySelector('#h2');
+const span = document.querySelector('span');
+const practiceSentences = [
+  "const user = { name: 'Alice', age: 30 };",
+  "if (isValid && !isExpired) { processItem(); }",
+  "for (let i = 0; i < items.length; i++) { console.log(items[i]); }",
+  "function greet(name) { return `Hello, ${name}!`; }",
+  "const add = (a, b) => a + b;",
+  "try { riskyOperation(); } catch (error) { console.error(error); }",
+  "while (queue.length > 0) { handle(queue.shift()); }",
+  "import { useState } from 'react';",
+  "console.log(typeof value === 'string' ? value.toUpperCase() : 'Not a string');"
+];
+let wordCount = 0;
+let startTime = null;
+
+h2.textContent = practiceSentences[wordCount];
+
+input.addEventListener('input', e => {
+  if(input.value.length === 1 && !startTime) {
+    startTime = new Date().getTime();
+  }
+  if(input.value[input.value.length -1] === practiceSentences[wordCount][input.value.length -1]) {
+    span.textContent = input.value;
+    h2.textContent = practiceSentences[wordCount].slice(input.value.length, practiceSentences[wordCount].length);
+    span.style.color = 'blue';
+  } else {
+    span.style.color = 'red';
+  }
+})
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  if(input.value === practiceSentences[wordCount]) {
+    wordCount < 9 ? wordCount++ : wordCount = 0;
+    const endTime = new Date().getTime();
+    const typingTime = endTime - startTime;
+    const h3 = document.createElement('h3');
+    h3.textContent = `You typed ${input.value.length} characters in ${typingTime / 1000} seconds. Giving you a typing speed of ${input.value.length / (typingTime / 1000)} characters per second. What you typed was ${input.value}`;
+    span.textContent = '';
+    h2.textContent = practiceSentences[wordCount];
+    document.body.appendChild(h3);
+    input.value = '';
+    startTime = null;
+  } else {
+    const h3 = document.createElement('h3');
+    h3.textContent = 'You mistyped the sentence, please try again';
+    document.body.appendChild(h3)
+  }
+})
+</script>
