@@ -1,0 +1,4 @@
+function zipvalidate(postcode) {
+  if(postcode.length !== 6) return false;
+  return /[12346]{1}\d{5}$/.test(postcode);
+}
