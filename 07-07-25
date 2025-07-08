@@ -1,0 +1,4 @@
+function uniqueSum(lst){
+  if(lst.length === 0) return null;
+  return Array.from(new Set(lst)).reduce((ac, a) => ac + a, 0);
+}
