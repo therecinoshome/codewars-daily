@@ -1,0 +1,4 @@
+function reject(array, predicate) {
+  const undesired = array.filter(predicate);
+  return array.filter(f => !undesired.includes(f));
+}
