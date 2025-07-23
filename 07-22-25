@@ -1,0 +1,9 @@
+function generatePairs(n) {
+  let result = new Set();
+  for(let i = 0; i <= n; i++) {
+    for(let j = 0; j <= n; j++) {
+      if(j >= i) result.add([i, j]);
+    }
+  }
+  return Array.from(result);
+}
